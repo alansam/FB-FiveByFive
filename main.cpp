@@ -6,6 +6,9 @@
 #include <iterator>
 #include <algorithm>
 #include <tuple>
+#include <cstdlib>
+
+// #define DEBUGZ_
 
 using namespace std::literals::string_literals;
 
@@ -30,7 +33,6 @@ int main() {
 
   std::istringstream ispang(pang);
 
-// #define DEBUGZ_
 #ifdef DEBUGZ_
 std::copy(std::istream_iterator<std::string>(ispang),
             std::istream_iterator<std::string>(),
@@ -84,5 +86,5 @@ std::copy(std::istream_iterator<std::string>(ispang),
               << '\n';
   });
 
-    return 0;
+    return EXIT_SUCCESS;
 }
